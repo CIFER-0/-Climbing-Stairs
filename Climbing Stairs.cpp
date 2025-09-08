@@ -11,18 +11,19 @@ int main() {
         return 0;
     }
 
-    int first = 1;   // ways(1)
-    int second = 2;  // ways(2)
+    int first = 1;   //اول رقم في المعادله 
+    int second = 2;  // تاني رقم في المعادله
     int result = 0;
 
     for (int i = 3; i <= n; i++) {
-        result = first + second; // ways(i) = ways(i-1) + ways(i-2)
-        first = second;          // تحديث
-        second = result;         // تحديث
+        result = first + second; //دي المعادله الي هنسخدمها عشان نجيب عدد الطرق بعد كده 
+        first = second;          
+        second = result;         
     }
 
     cout << "Number of distinct ways = " << result << endl;
 
     return 0;
 }
+
 
